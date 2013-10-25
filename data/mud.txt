@@ -1,0 +1,5 @@
+{name}={Dark Lore}
+{author}={H. Elwood Gilliland III}
+{version}={Locke's MUD version 0.1a}
+{about}={An online roleplaying text game server project began in 2012}
+{copyright}={(c)2012-2013 H. Elwood Gilliland III - some rights reserved}

@@ -1,0 +1,7 @@
+{main}={3333}
+{rwho}={3334}
+{aux}={3335}
+{data}={../data/}
+{database}={../data/database.txt}
+{mud}={../data/mud.txt}
+{greetings}={../data/greetings.txt}

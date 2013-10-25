@@ -1,0 +1,258 @@
+
+ 
+                                   PULP
+
+                        Persistent Universe Logic Platform
+                                      a.k.a
+                        Programmable Universal Literature Platform
+
+What is PULP?
+-------------
+
+Pulp stands for several different things.  Both Pulp and PULP are the same thing,
+and what Pulp is is onling gaming software for hosting mixed-mode graphical and
+textual games that provide universe descriptions, real-time interactivity and
+gameplay.  Related to technology of "MU" (Multi-user gaming servers like MUD,
+MUCK, MOO, MUSH, LP, DUM, SMAUG, UO, EQEmu, etc.)
+
+Pulp can be used as a modifiable string store with an attached logic system,
+for the purposes of driving a rmeote graphical client, or it can be used as
+a multi-player text adventure game.
+
+Pulp takes advantage of genericized concepts like "player", "group",
+"actor", "prop", "scene" to describe a world which can be facted and
+as detailed as the scripts allow for it to be.  Since Pulp's purpose is to
+both provide logic, output formatting, storage of data and a simple and
+effective interpreted language, it can be modified to suit the needs of
+a few focused purposes.
+
+
+License
+-------
+
+You are required to follow this license to use this software.
+
+Definitions. "Users" are people who use the server and who are not
+considered owners of the service that the server provides.  "Owners"
+are considered the people who have complete administrative control,
+can modify the source code.  "Authors" are Users who are empowered
+to modify the server via a remote connection and do not have access
+to the controls associated with administrative control.
+
+The gist of our license is that you may only sell access to the services
+if you have purchased a commercial license.  However, we recognize that
+some independent developers may wish to garner some capital to pay for
+the costs of running the service, and so we will permit "Owners' to set
+donation policies and we will allow them to accept donations without
+any applicable fees as long as the amount collected annually is less than
+$2000 USD.
+
+If you do not intend to take donations exceeding $2000 per year and do
+not intend to charge a fee for its use, then you are required to abide
+by the following rules to permit this software's use:
+
+   - You are not to charge for distribution of the software.
+   - You may release modified versions of the software under AL 2.0
+   - You may not remove copyright notices, license files or the
+     original documentation from the software, source code, etc.
+
+For explicit information on the licensing arrangements, see License.txt
+accompanying this file in the software package.
+
+
+Pulp ASCII Wordmarks and Media Standards
+----------------------------------------
+
+When discussing or documenting PULP, we request you use one of the ASCII
+logo depictions found in the accompanying file 'logos.txt', or one of the
+images found in /doc/logos/
+
+If you are planning to run a gaming server, you'll have to use these
+depictions and/or logos in the game itself, and on the website and other
+materials associated with your game.  We want to give you a wide array
+of choices so you can seamlessly integrated our logo with your trade
+dress.
+
+You are permitted to include bitmap image snapshops of the ascii renderings,
+the ASCII renderings themselves, or the logo files, unmodified, with your
+website, game etc.
+
+
+Why Pulp is different
+---------------------
+
+Pulp is a server designed to be written by specialized administrators without
+modifying the original source code.  Many MUD, MUCK, MUSH, MOO etc.,
+software servers are written so that the original source code may be easily
+modified whenever someone wants to install something new.  In some cases,
+specialized "offline editors" let administrators create files for MUs that
+the MU can use to generate new content.  In some cases, "online building"
+or "online creation" is used to dynamically alter an online world.
+
+In Pulp, you do not need to modify the source code or data files at all
+unless you plan to import third-party MU or Pulp content files, which is
+a slightly more involved process.  If you are creating a world or experience
+from scratch, all you need to do is compile and run Pulp, and modify the
+"god" user file provided with Pulp.  Everything else is done entirely
+within the Pulp socket interface.
+
+
+Why Pulp is more secure
+-----------------------
+
+Security is an issue.  For administrators of Diku and its derived MUD
+softwares, you may not be aware of the highly insecure facts about these
+softwares.  Exploitations can occur rather easily by injecting script
+files into a MUD.  These scripts can then execute on a remote machine,
+causing loss of data, damage to hardware, deployment of viruses, trojans,
+malware and the like; and maybe even provide a platform for greater
+machine compromises.
+
+Pulp does not allow the remote user to modify any files outside of its
+own data storage.  Pulp can only import files when instructed to do so,
+and it keeps track of files it has imported and removes them once they
+have been examined.  Administrators never name a file, and they never
+permit access to dangerous shell-level commands which could compromise
+the system.
+
+
+Why Pulp is more advanced
+-------------------------
+
+Pulp lets you create a rich experience with many layers of complexity
+not found in other softwares of a similar nature.  Pulp involves an
+advanced ASCII rendering engine, simple scripting parser, ways to script
+complex interactions, and possesses a dynamic way of modifying game
+mechanics without recompiling the server.
+
+Pulp supports MXP, XTerm 256 and ANSI color and screen control systems,
+to maximize the breadth of client support on existing software.
+
+Pulp also directly integrates with the PulpReader, an OpenGL-based
+graphical client available at the Pulp website.
+
+Pulp can store a lot in strings.  Pulp can store ASCII sprites, draw
+complex geometric shapes, share layered communications with a variety
+of users, maintain scripted actions over a period in real-time.  It
+also smartly remembers relevant things about its users, and is very
+easy to setup and manage.
+
+
+Pulp in a Nutshell
+------------------
+
+Pulp has a brief list of interrelated default "things", a scripting parser
+which is used contextually without complex data vectoring as a requirement.
+This means scripts are written quickly as long as you know the context of
+their execution.  So, scripts are specialized to a particular "thing",
+and that "thing" along with a script's type determines what variables mean
+and refer to.
+
+A concrete example of this is with interview scripts.  Interview scripts
+generally refer to a player, because they are used only during new
+character creation.  
+
+Another example is with, for instance, a die script.  The "this" in a death
+script may refer to a prop or an actor (or even a room, though scenes
+never die).  However, the same script, if simple enough, can work on any
+of these.
+
+A third example, which is fairly common but not the most common type,
+is a script that works only on a particular thing, for a particular purpose.
+
+
+The Pulp Multiversal Model
+--------------------------
+
+Pulp has a vertical striation of "game worlds" which covers all aspects
+and mirrors reality to some extent.
+
+Material - the indivisible, basic level of existence; materials simply
+describe the intrinsic value of a thing in the world.  All things are
+made of materials.  Materials have impact on almost every level above
+them, but exist as a simple list of names and weights.
+
+Prototype - A prototype is a "description of an object", in our
+nomenclature a "prop', which is used to generate a copy of itself.
+A prototype can be invented by a player, generated by a script,
+and then copied and reproduced.  It is a template for a prop.
+
+Prop - An instantiated prototype is a prop, which can be helped,
+destroyed, used, disassembled and modified.
+
+Genetics - a template for actors.  Genetics are the way an actor
+is described both physically and meta-physically.  Genetics are
+used in the creation of actors, which are instantiations of a
+particular genetics.  Genetics yield multiple actors, and
+establish profiles of a particular group of actors.
+
+Culture - a template for classes, which group skills and provides
+order among actors who participate in a culture.  Nations, mentioned
+later, may have multiple cultures.  Culture is related to prototypes,
+props, genetics (sometimes), actors, geographies and governments.
+
+Actors - Instantiated genetics with embued culture, an aspect of
+civilization, actor participate in the world and are controlled by
+governments.
+
+Blueprints - describe structures of one or more scenes, and can be
+used to replicate scenes in various places in the world.  Blueprints
+are used to deploy particular things in particular places and sometimes
+provide cues for actors.  Through scripts, blueprints can produce
+scenes that involve manufacturing, consumption, hazards, etc.
+
+Scenes - built both by nature and blueprints, scenes are the places
+in which actors and props reside.
+
+Geology - a form of nature which builds terrain and oceans.
+
+Astrology - a form of nature which builds heavens.
+
+Geography - large collections of scenes form geographics, which are
+claimed and fought over by governments.  Geographies are built by
+geology.
+
+Governments - categories by their size and historical context,
+the basic forms are town/citystate, barony/county, province/state,
+kingdom/nation, nation, empire. Culture determines the
+names of the various levels of government.  
+
+Colony - Governments are extended by colonies.  Colonies can
+only exist in areas that are ungovernment.
+
+Puppet - Governments can be extended by conquering other nations,
+but convert to empires.
+
+Empires - aggressive governments made up of the conglomeration of
+many nations and states.  Empires may extend across planets.
+
+Planets - a large collection of geologies.
+
+System - a large collection of planets.
+
+Galaxy - a large collection of systems.
+
+Dimension - a fundamental platform for physics, defining
+universal traits such as gravity, space, time and other facets
+of existence.
+
+
+The above sections can anecdotally be explained thusly:
+
+A template is required to create a specific thing, in
+particular there are pairings of prototype<->prop,
+genetics<->actors, blueprints<->scenes (or scene groups)
+
+Materials are compounded into props, actors and scenes, but
+their arrangement and availability is dependent on geology,
+geography and other constraints such as planet, system and
+dimensional ones.
+
+Dimensions contain systems, which contain planets.
+Planets and systems, and the geography on planets (a product
+of geology) are controlled by Nations which have joined,
+either forcibly or voluntarily, Empires.
+
+Nations are comprised of one or more cultures, which are
+associations between genetics and classes, also known as
+archetypes.  

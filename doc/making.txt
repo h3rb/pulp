@@ -1,0 +1,14 @@
+
+make re
+
+- remakes all
+
+
+make
+
+- makes what is changed
+
+
+make clean
+
+- removes made files

@@ -1,0 +1,8 @@
+{poop}={Hey welcome! >> }
+{fart}={Welcome to this game!
+}
+{piss}={
+Well fuckall you made it!
+
+Enter name:
+}

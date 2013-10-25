@@ -1,0 +1,37 @@
+#!/bin/csh
+# Backs up all files; removes .o's, saves and stores exec
+# Run anytime
+# Written by Locke.
+
+set filepath = $PWD
+set target = pulp
+
+while ( 1 )
+    # If you want to have logs in a different directory,
+    #   change the 'set logfile' line to reflect the directory name.
+    set index = 1000
+    while ( 1 )
+	set backupdir = $filepath/backups/$index.backup
+	if ( ! -e $backupdir ) break
+	@ index++
+    end
+
+    echo Cleaning.
+
+    rm nohup.out
+
+    cd $filepath/src
+    rm *.o
+
+    echo Creating backup $backupdir 
+    mkdir $backupdir
+    rm $filepath/src/*.o
+    rm $filepath/src/$target
+    tar -cvf $backupdir/source.tar $filepath/src >>$backupdir/manifest.txt
+    gzip $backupdir/source.tar  
+
+    tar -cvf $backupdir/data.tar $filepath/data >>$backupdir/manifest.txt
+    gzip $backupdir/data.tar  
+
+    exit
+end
