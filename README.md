@@ -8,7 +8,7 @@ What is PULP?
 -------------
 
 Pulp stands for several different things.  Both Pulp and PULP are the same thing,
-and what Pulp is is onling gaming software for hosting mixed-mode graphical and
+and what Pulp is is online gaming software for hosting mixed-mode graphical and
 textual games that provide universe descriptions, real-time interactivity and
 gameplay.  Related to technology of "MU" (Multi-user gaming servers like MUD,
 MUCK, MOO, MUSH, LP, DUM, SMAUG, UO, EQEmu, etc.)
