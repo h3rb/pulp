@@ -18,7 +18,7 @@ for the purposes of driving a rmeote graphical client, or it can be used as
 a multi-player text adventure game.
 
 Pulp takes advantage of genericized concepts like "player", "group",
-"actor", "prop", "scene" to describe a world which can be facted and
+"actor", "prop", "scene" to describe a world which can be faceted and
 as detailed as the scripts allow for it to be.  Since Pulp's purpose is to
 both provide logic, output formatting, storage of data and a simple and
 effective interpreted language, it can be modified to suit the needs of
