@@ -1,4 +1,7 @@
- PULP
+Please note: development on this project has been paused for some time.  If you want to learn more about what it was intended to be, see doc/manual.txt
+***
+
+PULP
 
                         Persistent Universe Logic Platform
                                       a.k.a
